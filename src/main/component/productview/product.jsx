@@ -10,7 +10,7 @@ import image6 from "../../assets/images/thumb6.jpg"
 export default function Product() {
   return (
     <div>
-<section className="padding-y bg-white shadow-sm">
+<section className="mt-5 bg-white shadow-sm">
    <div className="container">
       <div className="row">
          <aside className="col-lg-6">
