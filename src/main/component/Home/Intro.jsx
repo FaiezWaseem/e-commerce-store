@@ -11,7 +11,7 @@ export default function Intro() {
        <article className="text-center">
           <h1 className="display-4 text-white"> Great products are <br /> always in our store available </h1>
           <p className="lead text-white">Trendy Products, Factory Prices, Excellent Service</p>
-          <a href="#" className="btn btn-light btn-lg"> Purchase now</a> <a href="#" className="btn btn-warning btn-lg"> Learn more </a> 
+          <a  className="btn btn-light btn-lg"> Purchase now</a> <a className="btn btn-warning btn-lg"> Explore </a> 
        </article>
     </div>
  </div>

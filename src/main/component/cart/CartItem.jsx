@@ -1,7 +1,7 @@
 import React from 'react'
 import {  useRecoilState } from "recoil";
 import totalItems , { set  ,remove } from "./cartLogic"
-
+import { toast } from 'wc-toast';
 
 
 export default function CartItem({ obj }) {
@@ -56,7 +56,7 @@ React.useEffect(()=>{
                        </div>
 
                        <div className="col"> <strong className="price"> ${amount} </strong> </div>
-                       <div className="col text-end"> <a  className="btn btn-icon btn-light" onClick={()=> remove(items , obj.id , setItems)}>
+                       <div className="col text-end"> <a  className="btn btn-icon btn-light" onClick={()=> {remove(items , obj.id , setItems) ; toast.success("Removed Item Successfully")}}>
                             <i className="fa fa-trash"></i> </a> </div>
                     </div>
 

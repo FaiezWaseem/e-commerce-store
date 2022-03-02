@@ -2,7 +2,7 @@ import React from 'react'
 import {useNavigate} from 'react-router-dom';
 import {  useRecoilState } from "recoil";
 import totalItems , { set  ,remove } from "../cart/cartLogic"
-
+import { toast } from 'wc-toast';
 
 export default function GridProduct() {
   const history = useNavigate();
@@ -12,6 +12,7 @@ export default function GridProduct() {
   const addToCart = () => {
     const item = {id : random(100) ,qty : 1 , price : price};
     set(items , item , setItems);
+    toast.success('added To Card success');
   }
   return (
     <div className="col-lg-3 col-sm-6 col-12"  >
