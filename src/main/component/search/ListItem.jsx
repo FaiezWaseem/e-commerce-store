@@ -13,13 +13,13 @@ export default function ListItem() {
    }
 
   return (
-    <div  onClick={()=>history("/view/3/")}>
+    <div  >
         <article className="card card-product-list">
    <div className="row g-0">
-      <aside className="col-xl-3 col-lg-4 col-md-12 col-12"> 
+      <aside className="col-xl-3 col-lg-4 col-md-12 col-12"   onClick={()=>history("/view/3/")}> 
       <a href="#" className="img-wrap"> <img src="../assets/images/3.jpg"/> </a> </aside>
 
-      <div className="col-xl-6 col-lg-5 col-md-7 col-sm-7">
+      <div className="col-xl-6 col-lg-5 col-md-7 col-sm-7"  onClick={()=>history("/view/3/")}>
          <div className="card-body">
             <a href="#" className="h6 title mb-3"> Xiaomi Redmi 8 Original Global 128GB </a> 
             <ul className="list-check mb-2">

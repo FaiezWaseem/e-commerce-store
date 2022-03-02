@@ -7,6 +7,7 @@ import Signin from "./main/Screens/Signin"
 import Register from "./main/Screens/Register"
 import ProductView from "./main/Screens/ProductView"
 import Cart from "./main/Screens/Cart"
+import Account from "./main/Screens/Account"
 export default function AppRoutes() {
   return (
     <Router>
@@ -30,6 +31,9 @@ export default function AppRoutes() {
    </Routes>
    <Routes>
     <Route path="/MyCart/" exact element={<Cart />} />
+   </Routes>
+   <Routes>
+    <Route path="/Account/" exact element={<Account />} />
    </Routes>
    <Routes>
     <Route path="/view/:id/" exact element={<ProductView />} />

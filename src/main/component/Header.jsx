@@ -7,19 +7,30 @@ const query = atom({
    default: '', // default value (aka initial value)
  });
 
-
+const imageAvatar = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.8F97-4tTe0kDw2M0XktW8gHaHZ%26pid%3DApi&f=1";
 const Header = ({page}) => {
    const history = useNavigate()
    const [searchQuery, setsearchQuery] = useRecoilState(query);
+   const [isLogin  , setIslogin] = React.useState(true);
    const ChangeLocation = (to) =>{
       history(to) 
    }
-
-
 const HandleForm = (e) =>  {
    e.preventDefault();
    searchQuery != "" ? history("/search/"+searchQuery) : console.log("null")
 }
+
+const item = document.querySelectorAll(".nav-pills .nav-link")
+item.forEach(el =>  {
+   el.addEventListener("click" , (e)=>{
+      item.forEach(elem =>  {
+         elem.classList.remove("active")   
+      })
+       el.classList.add("active") 
+       
+      
+   })    
+})
 
     return (
         <header className="section-header border-bottom">
@@ -109,10 +120,15 @@ const HandleForm = (e) =>  {
                        </ul>
                     </li>
                  </ul>
-                 <ul className="navbar-nav ms-auto">
+                 {
+                    isLogin ?   <ul className="navbar-nav ms-auto">
+                    <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/Account/")}> <img alt='profile' src={imageAvatar}  style={{ width : 30 , height : 30 , borderRadius : "50%"}} />  </a> </li>
+                    <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/Account/")}>My account </a> </li>
+                 </ul>:  <ul className="navbar-nav ms-auto">
                     <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/signin/")} >Sign in </a> </li>
                     <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/register/")}>Register </a> </li>
                  </ul>
+                 }
               </div>
            
            </div>
