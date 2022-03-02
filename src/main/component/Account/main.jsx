@@ -1,6 +1,5 @@
 import React from 'react'
 import SideBar from "./SideBar"
-import AccountTab from "./AccountTab"
 import Spinner from 'react-spinner-material';
 export default function Main() {
   return (

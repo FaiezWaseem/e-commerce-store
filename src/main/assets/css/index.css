@@ -22,12 +22,21 @@ code {
 .myRegister {
   width: 50%;
 }
+@media screen and (max-width : 1000px) {
+  .account-tab {
+    flex-direction: row !important;
+  }
+}
 @media screen and (max-width : 768px) {
   .mySignin {
     width: 60%;
   }
   .myRegister {
     width: 80%;
+  }
+
+  .account-tab {
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width : 568px) {

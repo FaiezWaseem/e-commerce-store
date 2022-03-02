@@ -7,8 +7,8 @@ export default function SideBar() {
 
   return (
     <div>
-       <div className="d-flex align-items-start">
-  <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+       <div className="d-flex align-items-start account-tab" >
+  <div className="nav flex-column nav-pills me-3 account-tab" id="v-pills-tab" role="tablist" aria-orientation="vertical">
     <a className="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
     <a className="nav-link" id="v-pills-new-order-tab" data-bs-toggle="pill" data-bs-target="#v-pills-new-orders" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">new Orders</a>
     <a className="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order" type="button" role="tab" aria-controls="v-pills-order" aria-selected="false">Orders History</a>
@@ -27,7 +27,10 @@ export default function SideBar() {
 
     </div>
     <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        <div className='container'>
+
         <EditProfile/>
+        </div>
     </div>
     <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
 
