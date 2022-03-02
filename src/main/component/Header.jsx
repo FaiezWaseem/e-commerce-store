@@ -34,35 +34,7 @@ item.forEach(el =>  {
 
     return (
         <header className="section-header border-bottom">
-        <section className="header-top-dark bg-primary">
-           <div className="container">
-              <nav className="d-flex justify-content-between align-items-center flex-column flex-md-row">
-                 <div className="nav"> <a  className="nav-link p-2"> <i className="fab fa-lg fa-facebook"></i>
-                  </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-instagram"></i> 
-                  </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-twitter"></i> </a> 
-                  <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-linkedin"></i> </a> 
-                  </div>
-                 <div className="rating-wrap">
-                    <ul className="rating-stars">
-                       <li style={{ width: "80%"}} className="stars-active"> <i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i> </li>
-                       <li> <i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i> </li>
-                    </ul>
-                    <span className="label-rating">4.9/5 on Facebook and Google</span> 
-                 </div>
-                 <ul className="nav">
-                    <li className="nav-item dropdown">
-                       <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> User </a> 
-                       <ul className="dropdown-menu">
-                          <li> <a className="dropdown-item" href="#">Seller</a> </li>
-                          <li> <a className="dropdown-item" href="#">Admin</a> </li>
-                       </ul>
-                    </li>
-                 </ul>
-              </nav>
-              
-           </div>
-           
-        </section>
+
         
         <section className="header-main border-bottom">
            <div className="container">

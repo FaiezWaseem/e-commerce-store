@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from "../component/Header";
 import Intro from '../component/Home/Intro';
-import CategoriesSideBar from "../component/Home/CategoriesSideBar"
 import SubCategories from "../component/Home/SubCategories"
 import GridProduct from "../component/Home/GridProduct"
 import ElectronicCard from "../component/Home/ElectronicCard"
@@ -16,10 +15,7 @@ export default function Home() {
       <section  className='padding-top-sm'>
         <div className='container'>
         <div className='row'>
-          <div className='col-lg-3'> 
-          <CategoriesSideBar />
-          </div>
-          <div className='col-lg-9'>
+          <div className='col-lg-12'>
           <Intro />
           </div>
 
