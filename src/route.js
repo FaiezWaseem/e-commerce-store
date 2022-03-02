@@ -8,6 +8,8 @@ import Register from "./main/Screens/Register"
 import ProductView from "./main/Screens/ProductView"
 import Cart from "./main/Screens/Cart"
 import Account from "./main/Screens/Account"
+import WishList from "./main/Screens/WishList"
+import About from "./main/Screens/About"
 export default function AppRoutes() {
   return (
     <Router>
@@ -34,6 +36,12 @@ export default function AppRoutes() {
    </Routes>
    <Routes>
     <Route path="/Account/" exact element={<Account />} />
+   </Routes>
+   <Routes>
+    <Route path="/WishList/" exact element={<WishList />} />
+   </Routes>
+   <Routes>
+    <Route path="/About/" exact element={<About />} />
    </Routes>
    <Routes>
     <Route path="/view/:id/" exact element={<ProductView />} />

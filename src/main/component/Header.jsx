@@ -91,7 +91,7 @@ item.forEach(el =>  {
 
                  <div className="col-lg col-12">
                     <div className="float-md-end"> 
-                    <a  className="btn btn-light"> 
+                    <a  className="btn btn-light"  onClick={()=> ChangeLocation("/WishList/")}> 
                     <i className="fa fa-heart me-1"></i> Wishlist </a>
                      <a data-bs-toggle="offcanvas"  className="btn btn-light"  onClick={()=>ChangeLocation("/MyCart/") } > 
                      <i className="fa fa-shopping-cart me-1"></i> My cart </a> 
@@ -109,7 +109,7 @@ item.forEach(el =>  {
               <div className="navbar-collapse collapse" id="div_nav" >
                  <ul className="navbar-nav">
                     <li className="nav-item"> <a className="nav-link ps-0"  onClick={()=>ChangeLocation("/categories/")}  > Categories </a> </li>
-                    <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/about/")}  > About </a> </li>
+                    <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/About/")}  > About </a> </li>
                     <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/search/")} > Customer Support </a> </li>
                     <li className="nav-item dropdown">
                        <a className="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false"> More items </a> 
