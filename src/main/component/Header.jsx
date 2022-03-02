@@ -1,19 +1,36 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import logo from "../assets/images/logo.svg"
+import { atom, useRecoilState } from "recoil";
+const query = atom({
+   key: "searchQuery", // unique ID (with respect to other atoms/selectors)
+   default: '', // default value (aka initial value)
+ });
+
+
 const Header = ({page}) => {
    const history = useNavigate()
-   
+   const [searchQuery, setsearchQuery] = useRecoilState(query);
    const ChangeLocation = (to) =>{
       history(to) 
    }
+
+
+const HandleForm = (e) =>  {
+   e.preventDefault();
+   searchQuery != "" ? history("/search/"+searchQuery) : console.log("null")
+}
 
     return (
         <header className="section-header border-bottom">
         <section className="header-top-dark bg-primary">
            <div className="container">
               <nav className="d-flex justify-content-between align-items-center flex-column flex-md-row">
-                 <div className="nav"> <a  className="nav-link p-2"> <i className="fab fa-lg fa-facebook"></i> </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-instagram"></i> </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-twitter"></i> </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-linkedin"></i> </a> </div>
+                 <div className="nav"> <a  className="nav-link p-2"> <i className="fab fa-lg fa-facebook"></i>
+                  </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-instagram"></i> 
+                  </a> <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-twitter"></i> </a> 
+                  <a href="#" className="nav-link p-2"> <i className="fab fa-lg fa-linkedin"></i> </a> 
+                  </div>
                  <div className="rating-wrap">
                     <ul className="rating-stars">
                        <li style={{ width: "80%"}} className="stars-active"> <i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i> </li>
@@ -23,10 +40,10 @@ const Header = ({page}) => {
                  </div>
                  <ul className="nav">
                     <li className="nav-item dropdown">
-                       <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> English </a> 
+                       <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> User </a> 
                        <ul className="dropdown-menu">
-                          <li> <a className="dropdown-item" href="#">Arabic</a> </li>
-                          <li> <a className="dropdown-item" href="#">Russian</a> </li>
+                          <li> <a className="dropdown-item" href="#">Seller</a> </li>
+                          <li> <a className="dropdown-item" href="#">Admin</a> </li>
                        </ul>
                     </li>
                  </ul>
@@ -40,23 +57,35 @@ const Header = ({page}) => {
            <div className="container">
               <div className="row gx-2 gy-3">
                  <div className="col-lg col-md col-6 flex-grow-0">
-                    <a onClick={()=>ChangeLocation("/")} className="brand-wrap me-3"> <img className="logo" height="40" src={logo}  /> </a>
+                    <a onClick={()=>ChangeLocation("/")} className="brand-wrap me-3"> 
+                    <img className="logo" height="40" src={logo}  /> </a>
                  </div>
                  <div className="col-lg col-md col-6 flex-grow-0">
-                    <div className="dropdown float-end"> <button type="button" className="btn btn-light text-nowrap"> <i className="fa me-1 fa-map-marker"></i> Location </button> </div>
+                    <div className="dropdown float-end">
+                        <button type="button" className="btn btn-light text-nowrap">
+                            <i className="fa me-1 fa-map-marker"></i> Location </button> </div>
                     
                  </div>
 
                  <div className=" col-lg-4 col-md col-12">
-                    <form action="#">
-                       <div className="input-group"> <input type="search" className="form-control" placeholder="Search" /> <button className="input-group-text btn btn-light"> <i className="fa fa-search"></i> </button> </div>
+                    <form onSubmit={HandleForm}>
+                       <div className="input-group">
+                           <input type="search" className="form-control" placeholder="Search"  value={searchQuery}  onChange={(e)=>setsearchQuery(e.target.value)} />
+                            <button className="input-group-text btn btn-light"> <i className="fa fa-search"></i> 
+                            </button> </div>
                      
                     </form>
                     
                  </div>
 
                  <div className="col-lg col-12">
-                    <div className="float-md-end"> <a href="#" className="btn btn-light"> <i className="fa fa-heart me-1"></i> Wishlist </a> <a data-bs-toggle="offcanvas" href="#offcanvas_cart" className="btn btn-light"> <i className="fa fa-shopping-cart me-1"></i> My cart </a> <button className="btn btn-dark d-md-none float-end" type="button" data-bs-toggle="collapse" data-bs-target="#div_nav" aria-controls="div_nav" aria-expanded="false" aria-label="Toggle navigation"> <i className="fa fa-bars"></i> </button> </div>
+                    <div className="float-md-end"> 
+                    <a  className="btn btn-light"> 
+                    <i className="fa fa-heart me-1"></i> Wishlist </a>
+                     <a data-bs-toggle="offcanvas"  className="btn btn-light"  onClick={()=>ChangeLocation("/MyCart/") } > 
+                     <i className="fa fa-shopping-cart me-1"></i> My cart </a> 
+                     <button className="btn btn-dark d-md-none float-end" type="button" data-bs-toggle="collapse" data-bs-target="#div_nav" aria-controls="div_nav" aria-expanded="false" aria-label="Toggle navigation"> 
+                     <i className="fa fa-bars"></i> </button> </div>
                  </div>
               </div>
 
