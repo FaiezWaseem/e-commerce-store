@@ -1,5 +1,7 @@
 import React from 'react'
 import Card from './Card'
+import PieChart from "./PieChart"
+import VerticalChart from "./VerticalChart"
 export default function Index() {
   return (
     <div  className='container'>
@@ -34,8 +36,15 @@ export default function Index() {
                 value : "354000/=",
                 per : "7%"
             }} />
-
         </div>
+        <div  className='row mt-5 app-card shadow-sm'>
+           <div  className='col-lg-6 mt-3'>
+               <PieChart />
+           </div>
+           <div  className='col-lg-6 mt-5'>
+               <VerticalChart />
+           </div>
+         </div>
     </div>
   )
 }

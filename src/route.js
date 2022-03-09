@@ -62,6 +62,7 @@ export default function AppRoutes() {
    <Routes>
     <Route path="/store/:id/:storeName" exact element={<SellerStore />} />
    </Routes>
+     {/* { --------     SELLER PANELS     --------- } */}
    <Routes>
     <Route path="/seller/" exact element={<SellerHome />} />
    </Routes>

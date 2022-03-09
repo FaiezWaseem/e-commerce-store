@@ -6,7 +6,7 @@ export default function Sidebar() {
     <div>
                <div className="sidebar close">
     <div className="logo-details">
-      <i className='bx bxl-c-plus-plus'></i>
+      <i className='bx bx-store-alt'></i>
       <span className="logo_name">e-commerce</span>
     </div>
     <ul className="nav-links">
