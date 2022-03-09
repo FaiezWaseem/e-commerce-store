@@ -12,6 +12,15 @@ import WishList from "./main/Screens/WishList"
 import About from "./main/Screens/About"
 import OverlayLoader from "./main/component/OverlayLoader"
 import SellerStore from "./main/Screens/SellerStore"
+// ---------------------------------------------------
+// 00--------------------SELLER PANEL------------------
+import SellerHome from "./seller/pages/SellerHome"
+import SellerProduct from "./seller/pages/SellerProduct"
+import SellerOrder from "./seller/pages/SellerOrder"
+import SellerProfile from "./seller/pages/SellerProfile"
+import SellerShop from "./seller/pages/SellerShop"
+
+
 export default function AppRoutes() {
   return (
      <>
@@ -52,6 +61,21 @@ export default function AppRoutes() {
    </Routes>
    <Routes>
     <Route path="/store/:id/:storeName" exact element={<SellerStore />} />
+   </Routes>
+   <Routes>
+    <Route path="/seller/dashboard/" exact element={<SellerHome />} />
+   </Routes>
+   <Routes>
+    <Route path="/seller/product/:q" exact element={<SellerProduct />} />
+   </Routes>
+   <Routes>
+    <Route path="/seller/order/:q" exact element={<SellerOrder />} />
+   </Routes>
+   <Routes>
+    <Route path="/seller/profile/" exact element={<SellerProfile />} />
+   </Routes>
+   <Routes>
+    <Route path="/seller/shop/" exact element={<SellerShop />} />
    </Routes>
   </Router>
      </>
