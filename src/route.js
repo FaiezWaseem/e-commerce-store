@@ -11,7 +11,7 @@ import Account from "./main/Screens/Account"
 import WishList from "./main/Screens/WishList"
 import About from "./main/Screens/About"
 import OverlayLoader from "./main/component/OverlayLoader"
-
+import SellerStore from "./main/Screens/SellerStore"
 export default function AppRoutes() {
   return (
      <>
@@ -49,6 +49,9 @@ export default function AppRoutes() {
    </Routes>
    <Routes>
     <Route path="/view/:id/" exact element={<ProductView />} />
+   </Routes>
+   <Routes>
+    <Route path="/store/:id/:storeName" exact element={<SellerStore />} />
    </Routes>
   </Router>
      </>

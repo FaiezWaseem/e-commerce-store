@@ -9,7 +9,7 @@ export default function Footer() {
              <aside className="col-12 col-sm-12 col-lg-3">
                 <article className="me-lg-4">
                    
-                   <p className="mt-3"> © 2018- 2021 Templatemount. <br /> All rights reserved. </p>
+                 <img  src='' alt='logo' width="200" height={200} />
                 </article>
              </aside>
              <aside className="col-6 col-sm-4 col-lg-2">

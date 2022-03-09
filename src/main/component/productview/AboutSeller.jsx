@@ -25,7 +25,7 @@ const Aboutseller = () => {
            </div>
            <p> Established in 1980, lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore ipsum </p>
            <div className="d-flex gap-2 mb-2"> <button className="btn w-100 btn-success" type="button"> <i className="me-2 fa fa-phone"></i> Contact</button> <button className="btn w-100 btn-warning" type="button"> <i className="me-2 fa fa-comment-dots"></i> Message</button> </div>
-           <a href="#" className="btn w-100 btn-outline-primary">Visit store</a> 
+           <a className="btn w-100 btn-outline-primary">Visit store</a> 
         </div>
      </article>
     );

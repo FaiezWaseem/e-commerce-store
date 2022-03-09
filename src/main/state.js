@@ -13,6 +13,4 @@ const loader = atom({
       },
   })
 
-
-
   export { loader , getLoader  };
