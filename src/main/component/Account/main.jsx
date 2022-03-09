@@ -1,21 +1,28 @@
 import React from 'react'
 import SideBar from "./SideBar"
-import Spinner from 'react-spinner-material';
+import OverlayLoader from "../OverlayLoader"
 export default function Main() {
-  return (
-    <div>
-           <div  className='container mt-5 mb-5'>
-            <div  className='row'>
-               <div className='col-lg-12'>
-                   <Spinner size={120} spinnercolor={"#333"} spinnerWidth={2} visible={false} />
-                   <SideBar />
-               </div>
-            </div>
+  const [isLoading , setLoading]  = React.useState(true)
 
-        </div>
-        <div  style={{ textAlign : "center"}}>
-        <p> Seller ? <a  className='btn btn-primary'>Visit</a> Seller panel</p>
-        </div>
+  React.useEffect(()=>{
+    setTimeout(()=> setLoading(false) , 4000)
+  },[])
+
+
+  return (
+    <div  >
+       <OverlayLoader show={isLoading} />
+       <div className='container mt-5 mb-5'>
+          <div className='row'>
+            <div className='col-lg-12'>
+
+              <SideBar />
+            </div>
+          </div>
+
+        </div><div style={{ textAlign: "center" }}>
+            <p> Seller?<a className='btn btn-primary'>Visit</a> Seller panel</p>
+          </div>
     </div>
   )
 }

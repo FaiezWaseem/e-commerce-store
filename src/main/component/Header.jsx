@@ -20,21 +20,9 @@ const HandleForm = (e) =>  {
    searchQuery != "" ? history("/search/"+searchQuery) : console.log("null")
 }
 
-const item = document.querySelectorAll(".nav-pills .nav-link")
-item.forEach(el =>  {
-   el.addEventListener("click" , (e)=>{
-      item.forEach(elem =>  {
-         elem.classList.remove("active")   
-      })
-       el.classList.add("active") 
-       
-      
-   })    
-})
 
     return (
         <header className="section-header border-bottom">
-
         
         <section className="header-main border-bottom">
            <div className="container">
@@ -80,8 +68,9 @@ item.forEach(el =>  {
            <div className="container">
               <div className="navbar-collapse collapse" id="div_nav" >
                  <ul className="navbar-nav">
+                    <li className="nav-item"> <a className="nav-link ps-0"  onClick={()=>ChangeLocation("/")}  > Home </a> </li>
                     <li className="nav-item"> <a className="nav-link ps-0"  onClick={()=>ChangeLocation("/categories/")}  > Categories </a> </li>
-                    <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/About/")}  > About </a> </li>
+                    <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/about/")}  > About </a> </li>
                     <li className="nav-item"> <a className="nav-link"  onClick={()=>ChangeLocation("/search/")} > Customer Support </a> </li>
                     <li className="nav-item dropdown">
                        <a className="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false"> More items </a> 

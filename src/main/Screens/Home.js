@@ -8,7 +8,20 @@ import ElectronicCardList from "../component/Home/ElectronicCardList"
 import Banner from "../component/Home/Banner"
 import EndBanner from "../component/Home/EndBanner"
 import Footer from "../component/Footer"
+import { useRecoilState } from "recoil";
+import { loader }  from "../state"
+
 export default function Home() {
+  const [isLoading , setLoading ] = useRecoilState(loader);
+
+  React.useEffect(()=>{
+    setLoading(true)
+     setTimeout(()=> setLoading(false) ,2300)
+     
+
+  },[])
+
+
   return (
     <div>
       <Header page={"home"}  />

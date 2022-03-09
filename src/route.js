@@ -10,9 +10,13 @@ import Cart from "./main/Screens/Cart"
 import Account from "./main/Screens/Account"
 import WishList from "./main/Screens/WishList"
 import About from "./main/Screens/About"
+import OverlayLoader from "./main/component/OverlayLoader"
+
 export default function AppRoutes() {
   return (
-    <Router>
+     <>
+     <OverlayLoader />
+         <Router>
     <Routes>
       <Route index exact element={<Home />} />
     </Routes>
@@ -47,20 +51,7 @@ export default function AppRoutes() {
     <Route path="/view/:id/" exact element={<ProductView />} />
    </Routes>
   </Router>
+     </>
   )
 }
 
-{/* <Router>
-<Routes>
-  <Route index exact element={<Home />} />
-</Routes>
-<Routes>
-  <Route path="/watch/:video_Key/" exact element={<Watch />} />
-</Routes>
-<Routes>
-  <Route path="/Authentication/:userName/" exact element={<Auth />} />
-</Routes>
-<Routes>
-  <Route path="/Authentication/" exact element={<Auth />} />
-</Routes>
-</Router> */}
