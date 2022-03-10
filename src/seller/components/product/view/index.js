@@ -1,7 +1,6 @@
 import React from 'react'
 import ProductForm from "./ProductForm"
-import SelectCategory from "./SelectCategory"
-export default function Add() {
+export default function View() {
   return (
     <div>
         <ProductForm />

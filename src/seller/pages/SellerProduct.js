@@ -6,6 +6,7 @@ import { selected } from '../state'
 import { useRecoilState } from 'recoil'
 import List from "../components/product/list/index"
 import Add from "../components/product/add/index"
+import View from "../components/product/view/index"
 export default function SellerProduct() {
     const { q } = useParams();
     const [title , setTitle] = useRecoilState(selected);
@@ -39,9 +40,8 @@ React.useEffect(()=>{
 <section className="home-content-container">
 
      <div className='container'>
-     <h1>Product  {q}</h1>
      {
-       q === "List" ? <List /> : q === "Add" ? <Add /> : <></>
+       q === "List" ? <List /> : q === "Add" ? <Add /> : q === "View" ?  <View /> : <div> <h1>Error 404 Page Not Found</h1></div>
      }
      </div>
   </section>

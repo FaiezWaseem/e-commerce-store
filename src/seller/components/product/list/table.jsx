@@ -1,4 +1,5 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom';
 
 export default function Table() {
   return (
@@ -45,6 +46,7 @@ export default function Table() {
 
 
 const Tr = () =>{
+  const history = useNavigate();
     return 	 <tr>
         <td>
             <img src='https://matx-react.ui-lib.com/assets/images/products/headphone-2.jpg'  alt='product-image'   style={{ width : 45 , height : 40}}/>
@@ -57,7 +59,7 @@ const Tr = () =>{
      <td> <span className="badge bg-success">live</span></td>
      <td><span>8/January/2022</span></td>
      <td>Headphones</td>
-     <td> <a className="btn-sm app-btn-secondary" href="#">Edit</a></td>
+     <td> <a className="btn-sm app-btn-secondary" onClick={()=>history("/seller/product/View/2")} >Edit</a></td>
      <td> <a className="btn-sm app-btn-secondary" href="#">Delete</a></td>
      </tr>
 }

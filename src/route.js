@@ -70,10 +70,12 @@ export default function AppRoutes() {
     <Route path="/seller/dashboard/" exact element={<SellerHome />} />
    </Routes>
    <Routes>
-    <Route path="/seller/product/:q" exact element={<SellerProduct />} />
+    <Route path="/seller/product/:q/" exact element={<SellerProduct />} />
+    <Route path="/seller/product/:q/:id" exact element={<SellerProduct />} />
    </Routes>
    <Routes>
-    <Route path="/seller/order/:q" exact element={<SellerOrder />} />
+    <Route path="/seller/order/:q/" exact element={<SellerOrder />} />
+    <Route path="/seller/order/:q/:id" exact element={<SellerOrder />} />
    </Routes>
    <Routes>
     <Route path="/seller/profile/" exact element={<SellerProfile />} />
