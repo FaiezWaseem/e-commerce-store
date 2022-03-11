@@ -1,20 +1,17 @@
 import React from 'react'
-import {  useRecoilState } from "recoil";
-import totalItems , { set  ,remove } from "./cartLogic"
+import  { useCart } from "./cartLogic"
 import { toast } from 'wc-toast';
-
+import {useNavigate} from 'react-router-dom';
 
 export default function CartItem({ obj }) {
+  const history = useNavigate(); 
   const [qty , setQty] = React.useState(obj.qty);
   const [amount] = React.useState(obj.price);
-  const [items , setItems] = useRecoilState(totalItems);
-
+  const [setItem , removeItem] = useCart();
 React.useEffect(()=>{
     const item = {id : obj.id ,qty : qty , price : amount};
-    set(items , item , setItems);
+    setItem(item);
 },[qty])
-
-
 
 
   const onChangeQty = (value)=>{
@@ -27,7 +24,7 @@ React.useEffect(()=>{
         <article className="card card-body mb-3">
                     <div className="row gy-3 align-items-center">
                        <div className="col-md-6">
-                          <a href="#" className="itemside align-items-center">
+                          <a className="itemside align-items-center"  onClick={()=>history("/view/9/")}  >
                              <div className="aside"> 
                              <img src="../assets/images/1.jpg" height="72" width="72" className="img-thumbnail img-sm" /> 
                              </div>
@@ -56,7 +53,7 @@ React.useEffect(()=>{
                        </div>
 
                        <div className="col"> <strong className="price"> ${amount} </strong> </div>
-                       <div className="col text-end"> <a  className="btn btn-icon btn-light" onClick={()=> {remove(items , obj.id , setItems) ; toast.success("Removed Item Successfully")}}>
+                       <div className="col text-end"> <a  className="btn btn-icon btn-light" onClick={()=> {removeItem(obj.id ) ; toast.success("Removed Item Successfully")}}>
                             <i className="fa fa-trash"></i> </a> </div>
                     </div>
 

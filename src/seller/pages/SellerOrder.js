@@ -2,11 +2,11 @@ import React from 'react'
 import "../assets/css/sidebar.css"
 import Sidebar from "../components/Sidebar"
 import { useParams } from 'react-router-dom'; 
-import { selected } from '../state'
-import { useRecoilState } from 'recoil'
+import { useSelected } from '../state'
+
 export default function SellerOrder() {
     const { q } = useParams();
-    const [title , setTitle] = useRecoilState(selected);
+    const [title , setTitle] = useSelected();
     setTitle("Order "+q);
 React.useEffect(()=>{
     let arrow = document.querySelectorAll(".arrow");

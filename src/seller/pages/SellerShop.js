@@ -1,11 +1,10 @@
 import React from 'react'
 import "../assets/css/sidebar.css"
 import Sidebar from "../components/Sidebar"
-import { useRecoilState } from 'recoil'
-import { selected } from '../state'
+import { useSelected } from '../state'
 
 export default function SellerShop() {
-    const [title , setTitle] = useRecoilState(selected);
+    const [title , setTitle] = useSelected();
     setTitle("Shop Setting")
 
     React.useEffect(()=>{

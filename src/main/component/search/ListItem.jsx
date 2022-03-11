@@ -1,15 +1,15 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom"
-import {  useRecoilState } from "recoil";
-import totalItems , { set  ,remove } from "../cart/cartLogic"
-
+import { useCart } from "../cart/cartLogic"
+import { toast } from 'wc-toast';
 export default function ListItem() {
    const history = useNavigate();
-   const [items , setItems] = useRecoilState(totalItems);
+   const [setItem , removeItem] = useCart();
    const random = (v) => Math.floor((Math.random() * v )+1)
    const addToCart = () => {
      const item = {id : random(100) ,qty : 1 , price : 120};
-     set(items , item , setItems);
+     setItem(item);
+     toast.success("Added To Cart");
    }
 
   return (
@@ -41,7 +41,7 @@ export default function ListItem() {
        
             <p className="text-success">Free shipping</p>
             <p className="text-muted"> 10 days ship </p>
-            <br /> <a href="#" className="btn btn-primary w-100 mb-2" onClick={addToCart} > Add to cart </a> <a href="#" className="btn btn-outline-primary w-100"> Wishlist </a> 
+            <br /> <a className="btn btn-primary w-100 mb-2" onClick={addToCart} > Add to cart </a> <a href="#" className="btn btn-outline-primary w-100"> Wishlist </a> 
          </div>
          
       </aside>

@@ -2,14 +2,13 @@ import React from 'react'
 import "../assets/css/sidebar.css"
 import Sidebar from "../components/Sidebar"
 import { useParams } from 'react-router-dom'; 
-import { selected } from '../state'
-import { useRecoilState } from 'recoil'
+import { useSelected } from '../state'
 import List from "../components/product/list/index"
 import Add from "../components/product/add/index"
 import View from "../components/product/view/index"
 export default function SellerProduct() {
     const { q } = useParams();
-    const [title , setTitle] = useRecoilState(selected);
+    const [title , setTitle] = useSelected();
     setTitle("Product "+q);
 
 React.useEffect(()=>{

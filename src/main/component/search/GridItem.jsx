@@ -1,16 +1,16 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom';
-import {  useRecoilState } from "recoil";
-import totalItems , { set  ,remove } from "../cart/cartLogic"
-
+import  { useCart } from "../cart/cartLogic"
+import { toast } from 'wc-toast';
 export default function GridItem() {
   const random = (v) => Math.floor((Math.random() * v )+1)
   const history = useNavigate();
   const price = random(300);
-  const [items , setItems] = useRecoilState(totalItems);
+  const [setItem , removeItem] = useCart();
   const addToCart = () => {
     const item = {id : random(100) ,qty : 1 , price : price};
-    set(items , item , setItems);
+    setItem(item);
+    toast.success("Added To Cart");
   }
   return (
     <div className="col-lg-4 col-sm-6 col-12"  >
@@ -20,7 +20,7 @@ export default function GridItem() {
                        <div className="price-wrap"> <strong className="price">${price}</strong> </div>
                       
                        <p className="title mb-2">T-shirts with multiple colors, for men and lady - unisex</p>
-                       <a href="#" className="btn btn-primary" onClick={addToCart} >Add to cart</a> <a href="#" className="btn btn-outline-primary btn-icon"> <i className="fa fa-heart"></i> </a> 
+                       <a  className="btn btn-primary" onClick={addToCart} >Add to cart</a> <a href="#" className="btn btn-outline-primary btn-icon"> <i className="fa fa-heart"></i> </a> 
                     </div>
             </div>
                

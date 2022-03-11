@@ -1,4 +1,4 @@
-import {  atom ,  selector  } from "recoil";
+import {  atom ,  selector  , useRecoilState } from "recoil";
 
 const selected = atom({
     key: "selected", // unique ID (with respect to other atoms/selectors)
@@ -13,4 +13,11 @@ const selected = atom({
       },
   })
 
-  export { selected , getselected  };
+const useSelected = () => {
+      const [value , setValue] = useRecoilState(selected);
+      return [value  , setValue];
+} 
+
+
+
+  export { selected , getselected  , useSelected };

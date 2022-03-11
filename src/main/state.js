@@ -1,4 +1,4 @@
-import {  atom ,  selector  } from "recoil";
+import {  atom ,  selector , useRecoilState  } from "recoil";
 
 const loader = atom({
     key: "isLoading", // unique ID (with respect to other atoms/selectors)
@@ -13,4 +13,11 @@ const loader = atom({
       },
   })
 
-  export { loader , getLoader  };
+
+
+ const useLoader = () => {
+    const [value , setValue] = useRecoilState(loader);
+    return [value  , setValue];
+}   
+
+  export { loader , getLoader , useLoader  };

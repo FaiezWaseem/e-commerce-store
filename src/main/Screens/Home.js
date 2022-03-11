@@ -8,17 +8,15 @@ import ElectronicCardList from "../component/Home/ElectronicCardList"
 import Banner from "../component/Home/Banner"
 import EndBanner from "../component/Home/EndBanner"
 import Footer from "../component/Footer"
-import { useRecoilState } from "recoil";
-import { loader }  from "../state"
+import { useLoader }  from "../state"
 
 export default function Home() {
-  const [isLoading , setLoading ] = useRecoilState(loader);
+  const [isLoading , setLoading ] = useLoader();
 
   React.useEffect(()=>{
     setLoading(true)
-     setTimeout(()=> setLoading(false) ,2300)
+     setTimeout(()=> setLoading(false) ,1000)
      
-
   },[])
 
 

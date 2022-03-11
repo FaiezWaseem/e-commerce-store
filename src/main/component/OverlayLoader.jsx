@@ -1,9 +1,8 @@
 import React from 'react'
 import Spinner from 'react-spinner-material';
-import { useRecoilState } from "recoil";
-import {loader} from "../state"
+import {useLoader} from "../state"
 export default function OverlayLoader() {
-  const [show ] = useRecoilState(loader);
+  const [show ] = useLoader();
   return (
     <div >
         {
