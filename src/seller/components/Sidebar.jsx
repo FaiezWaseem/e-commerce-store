@@ -38,7 +38,7 @@ export default function Sidebar() {
       <li>
         <div className="iocn-link">
           <a href="#">
-            <i className='bx bx-book-alt' ></i>
+          <i class='bx bx-cart' ></i>
             <span className="link_name">Orders</span>
           </a>
           <i className='bx bxs-chevron-down arrow' ></i>
@@ -51,12 +51,12 @@ export default function Sidebar() {
       </li>
       
       <li>
-        <a href="#">
-          <i className='bx bx-pie-chart-alt-2' ></i>
-          <span className="link_name">Analytics</span>
+        <a >
+        <i class='bx bx-wallet-alt'></i>
+          <span className="link_name">MyWallet</span>
         </a>
         <ul className="sub-menu blank">
-          <li><a className="link_name" href="#">Analytics</a></li>
+          <li><a className="link_name">MyWallet</a></li>
         </ul>
       </li>
       <li onClick={()=>history("/seller/profile/")}>

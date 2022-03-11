@@ -2,7 +2,7 @@ import React from 'react'
 import "../assets/css/sidebar.css"
 import Sidebar from "../components/Sidebar"
 import { useSelected } from '../state'
-
+import Shop from "../components/shop/index"
 export default function SellerShop() {
     const [title , setTitle] = useSelected();
     setTitle("Shop Setting")
@@ -34,7 +34,10 @@ export default function SellerShop() {
       {title}
     </div>
     <section className="home-content-container">
-       
+
+      <div className='container app-card m-2'>
+        <Shop />
+      </div>
       </section>
   </section>
     </div>

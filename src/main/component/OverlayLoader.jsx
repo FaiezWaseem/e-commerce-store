@@ -7,7 +7,7 @@ export default function OverlayLoader() {
     <div >
         {
             show ? <div  className='overlay' >
-            <Spinner size={120} spinnercolor={"#ffffff"} spinnerWidth={2} visible={show} />
+            <Spinner size={120} spinnercolor={"#ffffff"} spinnerwidth={2} visible={show} />
           </div> : <></>
         }
         

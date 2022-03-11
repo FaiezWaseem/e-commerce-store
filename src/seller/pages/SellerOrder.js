@@ -3,6 +3,8 @@ import "../assets/css/sidebar.css"
 import Sidebar from "../components/Sidebar"
 import { useParams } from 'react-router-dom'; 
 import { useSelected } from '../state'
+import List from "../components/order/list/index"
+import View from "../components/order/view/index"
 
 export default function SellerOrder() {
     const { q } = useParams();
@@ -34,7 +36,11 @@ React.useEffect(()=>{
   {title}
 </div>
 <section className="home-content-container">
-     <h1>Order  {q}</h1>
+     <div  className='container'>
+     {
+       q === "List" ? <List /> :  <View /> 
+     }
+     </div>
   </section>
 </section>
 </div>
