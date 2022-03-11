@@ -20,7 +20,7 @@ export default function GridItem() {
                        <div className="price-wrap"> <strong className="price">${price}</strong> </div>
                       
                        <p className="title mb-2">T-shirts with multiple colors, for men and lady - unisex</p>
-                       <a  className="btn btn-primary" onClick={addToCart} >Add to cart</a> <a href="#" className="btn btn-outline-primary btn-icon"> <i className="fa fa-heart"></i> </a> 
+                       <a  className="btn btn-primary" onClick={addToCart} >Add to cart</a> <a href="#" className="btn btn-outline-primary btn-icon"> <i class='bx bxs-heart my-1'></i></a> 
                     </div>
             </div>
                

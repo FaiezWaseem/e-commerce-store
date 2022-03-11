@@ -49,7 +49,7 @@ export default function View() {
                       </tr>
                       <tr>
                          <td class="w-50 strong-600">Email : </td>
-                         <td>coolrathan.t.96@gmail.com</td>
+                         <td>cool@gmail.com</td>
                       </tr>
                       <tr>
                          <td class="w-50 strong-600">Phone : </td>

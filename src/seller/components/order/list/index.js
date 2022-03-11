@@ -2,7 +2,7 @@ import React from 'react'
 import "../../../assets/css/Table.css"
 export default function List() {
   return (
-    <div className='app-card app-card-orders-table shadow-sm mb-5'>
+    <div className='app-card app-card-orders-table shadow-sm mb-5'  style={{ overflowX : "scroll" }}>
 <table className="table app-table-hover mb-0 text-left">
    <thead className="thead-light">
       <tr>

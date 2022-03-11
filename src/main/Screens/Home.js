@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../component/Header";
 import Intro from '../component/Home/Intro';
 import SubCategories from "../component/Home/SubCategories"
-import GridProduct from "../component/Home/GridProduct"
+import GridProduct from "../component/GridProduct"
 import ElectronicCard from "../component/Home/ElectronicCard"
 import ElectronicCardList from "../component/Home/ElectronicCardList"
 import Banner from "../component/Home/Banner"

@@ -35,7 +35,7 @@ export default function SellerShop() {
     </div>
     <section className="home-content-container">
 
-      <div className='container app-card m-2'>
+      <div className='container app-card m-3' style={{ overflowX : "scroll" }} >
         <Shop />
       </div>
       </section>

@@ -1,6 +1,7 @@
 import React from 'react'
 import "../assets/css/sidebar.css"
 import Sidebar from "../components/Sidebar"
+import EditProfile from "../../main/component/Account/EditProfile"
 import { useSelected } from '../state'
 
 export default function SellerProfile() {
@@ -34,7 +35,7 @@ export default function SellerProfile() {
       {title}
     </div>
     <section className="home-content-container">
-       
+        <EditProfile />
       </section>
   </section>
     </div>

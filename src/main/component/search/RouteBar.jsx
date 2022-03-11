@@ -38,11 +38,11 @@ export default function RouteBar() {
             <nav className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu2"> <a className="dropdown-item" href="#">Dropdown link</a> <a className="dropdown-item" href="#">Dropdown link</a> </nav>
          </div>
          
-         <div className="btn-group"> 
+         <div className="btn-group mx-2"> 
          <a className="btn btn-light active" id='listView' data-bs-toggle="tooltip" title="List view" onClick={()=> setSharedValue(false) } > 
-         <i className="fa fa-bars"></i> </a>
+         <i class='bx bx-list-ul py-1' style={{ fontSize : 20}}></i> </a>
           <a  className="btn btn-light " id='GridView'  data-bs-toggle="tooltip" title="Grid view" onClick={()=> setSharedValue(true) }>
-              <i className="fa fa-th"></i> </a>
+          <i class='bx bxs-grid py-1' style={{ fontSize : 20}}></i> </a>
                </div>
          
       </div>

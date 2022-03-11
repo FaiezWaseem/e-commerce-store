@@ -6,6 +6,7 @@ import FilterSideBar from "../component/search/FilterSideBar"
 import RouteBar from "../component/search/RouteBar"
 import ListItem from "../component/search/ListItem"
 import GridItem from "../component/search/GridItem"
+
 import { atom, useRecoilState } from "recoil";
 const gridState = atom({
    key: "isGrid", // unique ID (with respect to other atoms/selectors)
@@ -30,6 +31,7 @@ export default function SearchResults() {
              
                  {
                   isGrid ? <div className='col-lg-9'> <div className='row' >
+                  <GridItem />
                   <GridItem />
                   <GridItem />
                   <GridItem />

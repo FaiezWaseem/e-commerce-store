@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import logo from "../assets/images/logo.svg"
+import logo from "../assets/images/logo.jpg"
 import { atom, useRecoilState } from "recoil";
 const query = atom({
    key: "searchQuery", // unique ID (with respect to other atoms/selectors)
@@ -34,7 +34,7 @@ const HandleForm = (e) =>  {
                  <div className="col-lg col-md col-6 flex-grow-0">
                     <div className="dropdown float-end">
                         <button type="button" className="btn btn-light text-nowrap">
-                            <i className="fa me-1 fa-map-marker"></i> Location </button> </div>
+                        <i class='bx bx-current-location py-1'></i> Location </button> </div>
                     
                  </div>
 
@@ -42,7 +42,7 @@ const HandleForm = (e) =>  {
                     <form onSubmit={HandleForm}>
                        <div className="input-group">
                            <input type="search" className="form-control" placeholder="Search"  value={searchQuery}  onChange={(e)=>setsearchQuery(e.target.value)} />
-                            <button className="input-group-text btn btn-light"> <i className="fa fa-search"></i> 
+                            <button className="input-group-text btn btn-light"> <i class='bx bx-search-alt py-1'></i>
                             </button> </div>
                      
                     </form>
@@ -52,11 +52,11 @@ const HandleForm = (e) =>  {
                  <div className="col-lg col-12">
                     <div className="float-md-end"> 
                     <a  className="btn btn-light"  onClick={()=> ChangeLocation("/WishList/")}> 
-                    <i className="fa fa-heart me-1"></i> Wishlist </a>
-                     <a data-bs-toggle="offcanvas"  className="btn btn-light"  onClick={()=>ChangeLocation("/MyCart/") } > 
-                     <i className="fa fa-shopping-cart me-1"></i> My cart </a> 
+                    <i class='bx bxs-heart px-2 py-1'  ></i>Wishlist </a>
+                     <a data-bs-toggle="offcanvas"  className="btn btn-light mx-2"  onClick={()=>ChangeLocation("/MyCart/") } > 
+                     <i class='bx bxs-cart px-2'></i>My cart </a> 
                      <button className="btn btn-dark d-md-none float-end" type="button" data-bs-toggle="collapse" data-bs-target="#div_nav" aria-controls="div_nav" aria-expanded="false" aria-label="Toggle navigation"> 
-                     <i className="fa fa-bars"></i> </button> </div>
+                     <i class='bx bx-menu'></i></button> </div>
                  </div>
               </div>
 

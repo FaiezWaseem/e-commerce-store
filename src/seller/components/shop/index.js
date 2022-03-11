@@ -4,20 +4,24 @@ export default function Shop() {
 
   return (
     <div className='p-4'>
-    <div class="row">
+    <div class="row px-3">
         <div class="col-md-12">
-            <label>Shop Name (English) <span class="required-star">*</span></label>
+            <label>*</label>
+            <label>Shop Name </label>
             <input type="text" class="form-control mb-3" placeholder="Shop Name (English)" name="name" required />
         </div>
         <div class="col-md-12">
-            <label>Address (English) <span class="required-star">*</span></label>
+        <span class="required-star">*</span>
+            <label>Address</label>
             <input type="text" class="form-control mb-3" placeholder="Address Here, City, State, Country - Pincode" name="address" required />
         </div>
         <div class="col-md-12">
-         <label> Description (English) <span class="required-star">*</span></label>
+        <span class="required-star">*</span>
+         <label> Description</label>
          <textarea name="meta_description" placeholder="Meta Description (English)" rows="6" class="form-control mb-3" required="">Sellers Shop</textarea>
        </div>
         <div class="col-md-12">
+        <span class="required-star">*</span>
             <label>Logo <small>(120x120)</small></label>
 
             <input type="file" name="logo" id="file-2" class="custom-input-file custom-input-file--4" data-multiple-caption="{count} files selected" accept="image/*" />
@@ -30,8 +34,9 @@ export default function Shop() {
            </label>
         </div>
     </div>
-    <div class="row">
+    <div class="row px-5">
         <div class="col-md-2">
+        <span class="required-star">*</span>
             <label>Current Logo</label>
         </div>
         <div class="col-md-10">
